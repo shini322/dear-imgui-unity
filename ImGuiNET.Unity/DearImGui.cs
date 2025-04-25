@@ -43,6 +43,11 @@ namespace ImGuiNET.Unity
         static readonly ProfilerMarker s_layoutPerfMarker = new ProfilerMarker("DearImGui.Layout");
         static readonly ProfilerMarker s_drawListPerfMarker = new ProfilerMarker("DearImGui.RenderDrawLists");
 
+        public void SetCamera(Camera camera) 
+        {
+            _camera = camera;
+        }
+
         void Awake()
         {
             _context = ImGuiUn.CreateUnityContext();
